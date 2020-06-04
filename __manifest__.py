@@ -1,28 +1,26 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "AIO Pharmacy",
+    'name': " Pharmacy Managment Tracking performance",
 
     'summary': """
-       All In One Pharmacy Solution contaions all pharmacy needs""",
+       APharmacy management tracking performance""",
 
     'description': """
-        All In One Pharmacy Solution contaions all pharmacy needs
-		Sales :
-		Purchase :
-		Inventory :
+        to make this happen we need three modules:
+		1 - Sales : to control sales orders
+		2- Purchase : to control purchase order
+		3- Inventory : to locate the medcine or the product in locations 
     """,
 
-    'author': "E.Mudathir Ahmed Omer",
-    'website': "http://www.msolution.com",
+    'author': "Ayman Osman",
+    'website': "http://www.ayman.com",
 
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
-    # for the full list
+    #
     'category': 'module_category_point_of_sale',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','purchase','stock','sale_management','backend_theme_cyan'],
+    'depends': ['base','purchase','stock','sale_management'],
 
     # always loaded
     'data': [
