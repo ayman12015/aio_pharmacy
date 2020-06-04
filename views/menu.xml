@@ -1,0 +1,65 @@
+<odoo>
+    <data>
+
+
+
+        <!--<record id="action_stock_report_test" model="ir.actions.client">-->
+        <!--<field name="name">Upstream Traceability</field>-->
+        <!--<field name="tag">stock_report_generic</field>-->
+        <!--<field name="context" eval="{'url': '/stock/output_format/stock/active_id', 'model': 'stock.traceability.report'}" />-->
+    <!--</record>-->
+
+
+
+
+
+        <menuitem name="Pharmacy" id="pharmacy_menu_root"/>
+
+                                <!-- Sales Transactions -->
+        <menuitem name="Sales" id="pharmacy_sale_menu" parent="pharmacy_menu_root" sequence="1"/>
+
+        <menuitem name="Sale Order" id="pharmacy_sale_order" parent="pharmacy_sale_menu"
+        action="sale.action_orders"/>
+
+        <menuitem name="Sales Reports" id="pharmacy_sale_reports" parent="pharmacy_sale_menu"
+        action="sale.action_order_report_all"/>
+
+                                <!-- Purchase Transactions -->
+        <menuitem name="Purchase" id="pharmacy_purchase_menu" parent="pharmacy_menu_root" sequence="2"/>
+
+        <menuitem name="Purchase Order" id="pharmacy_purchase_order" parent="pharmacy_purchase_menu"
+        action="purchase.purchase_form_action"/>
+
+        <menuitem name="Purchase Reports" id="pharmacy_purchase_reports" parent="pharmacy_purchase_menu"
+        action="purchase.action_purchase_order_report_all"/>
+
+
+                                <!-- Stock -->
+        <menuitem name="Stock" id="pharmacy_stock_menu" parent="pharmacy_menu_root" sequence="3"/>
+
+        <menuitem name="Products" id="pharmacy_products" action="stock.product_template_action_product" parent="pharmacy_stock_menu" sequence="1"/>
+        <menuitem name="Current Stock" id="pharmacy_stock_current_stock" action="stock.action_stock_quantity_history" parent="pharmacy_stock_menu" sequence="2"/>
+
+
+                                <!-- Configration -->
+        <menuitem name="Configration" id="pharmacy_config_menu" parent="pharmacy_menu_root"/>
+
+        <menuitem name="Products" id="pharmacy_product_config_menu" parent="pharmacy_config_menu"/>
+
+        <menuitem name="Products Category" id="pharmacy_product_category" parent="pharmacy_product_config_menu"
+        action="product.product_category_action_form" sequence="1"/>
+
+        <menuitem name="Customers / Vendors" id="pharmacy_customers_vendors_config_menu" parent="pharmacy_config_menu"/>
+
+        <menuitem name="Customers" id="pharmacy_customers" parent="pharmacy_customers_vendors_config_menu"
+        action="base.action_partner_form" sequence="1"/>
+
+        <menuitem name="Vendors" id="pharmacy_vendors" parent="pharmacy_customers_vendors_config_menu"
+        action="base.action_partner_supplier_form" sequence="2"/>
+
+
+
+
+
+    </data>
+</odoo>

@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+       
+                 <template id="test_js" name="test_js assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                 <script type="text/javascript" src="/aio_pharmacy/static/src/js/ovpush.js"></script>
+            </xpath>
+        </template>
+
+
+
+
+    </data>
+</odoo>

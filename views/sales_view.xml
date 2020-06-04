@@ -1,0 +1,34 @@
+<odoo>
+    <data>
+
+
+
+
+<record id="sale_order" model="ir.ui.view">
+            <field name="name">Sale Order Inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr='//field[@name="validity_date"]' position="after">
+                    <!--<field name="barcode_text"/>-->
+
+                    <field name="journal_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+                </xpath>
+                <xpath expr='//field[@name="partner_id"]' position="after">
+                    <field name="user_id"  readonly="1"/>
+                </xpath>
+                <xpath expr='//field[@name="order_line"]/tree/field[@name="name"]' position="after">
+                    <field name="tracking" invisible="1"/>
+                    <field name="batch" attrs="{'required':[('tracking','in',('lot','serial'))]}"/>
+                </xpath>
+
+                <xpath expr='//field[@name="note"]' position="attributes">
+                    <attribute name="placeholder">Write Any Notes Here</attribute>
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}</attribute>
+                </xpath>
+            </field>
+</record>
+
+
+    </data>
+</odoo>

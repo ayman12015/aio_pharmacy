@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_aio_pharmacy_aio_pharmacy,aio_pharmacy.aio_pharmacy,model_aio_pharmacy_aio_pharmacy,,1,0,0,0
